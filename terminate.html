@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminate Account</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevents scrollbars caused by the pseudo-element */
+            position: relative;
+            min-height: 100vh;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://wallpaperboat.com/wp-content/uploads/2019/12/white-minimalism-02.jpg'); /* Direct link to the image with proper parameters */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            filter: blur(8px); /* Applies the blur effect */
+            z-index: -1; /* Places the background behind the content */
+        }
+        header {
+            background-color: lightblue;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header nav a {
+            color: black;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: purple;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: transparent; /* Make sure background is transparent */
+            border: none; /* Remove any border */
+            position: relative; /* Ensures main stays on top */
+            z-index: 1;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        button {
+            background-color: lightblue;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: lightgrey;
+        }
+        footer {
+            background-color: lightblue;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function terminateAccount() {
+            alert('Your account has been terminated.');
+            window.location.href = 'loginpage.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="background"></div> <!-- Blurred background -->
+    <header>
+        <h1>Terminate Account</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="loginpage.html">Login</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="wallet.html">Wallet</a>
+            <a href="terminate.html">Terminate Account</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Terminate Account Page</h2>
+        <p>If you wish to terminate your account, please confirm below.</p>
+        <button onclick="terminateAccount()">Terminate Account</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Digital Wallet Service. All rights reserved.</p>
+    </footer>
+</body>
+</html>
